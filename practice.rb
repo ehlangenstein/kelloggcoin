@@ -27,3 +27,35 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+ben = 0
+brian = 0
+evan = 0
+anthony = 0 
+
+for transaction in blockchain
+  if transaction["from_user"] == "ben"
+    ben = ben -transaction["amount"]
+  elsif transaction["from_user"]=="brian"
+    brian= brian - transaction["amount"]
+  elsif transaction["from_user"]=="evan"
+    evan=evan - transaction["amount"]
+  elsif transaction["from_user"]=="anthony"
+    anthony=anthony-transaction["amount"]
+  end 
+
+  if transaction["to_user"] =="ben"
+    ben = ben + transaction["amount"]
+  elsif transaction["to_user"]=="brian"
+    brian= brian + transaction["amount"]
+  elsif transaction["to_user"]=="evan"
+    evan=evan + transaction["amount"]
+  elsif transaction["to_user"]=="anthony"
+    anthony=anthony+transaction["amount"]
+  end 
+
+end
+
+puts "Ben's KelloggCoin balance is #{ben}"
+puts "Brian's KelloggCoin balance is #{brian}"
+puts "Anthony's KelloggCoin balance is #{anthony}"
+puts "Evan's KelloggCoin balance is #{evan}"
